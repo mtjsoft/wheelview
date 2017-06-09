@@ -1,0 +1,24 @@
+        /**
+	 * 日期、时间选择
+	 */
+	private void showSelectTimeWindow() {
+		TimePopupWindow window = new TimePopupWindow(getPageContext(),
+				Type.YEAR_MONTH);
+		window.setRange(1970, 2030);
+		window.setOnTimeSelectListener(new OnTimeSelectListener() {
+			@Override
+			public void onTimeSelect(Date date) {
+				String TIME_FORMAT_DAY = "yyyy-MM";
+				String formatDateString = HHFormatUtils.convertToString(date,
+						TIME_FORMAT_DAY);
+				Date currentDate = new Date();
+				if (currentDate.before(date)) {
+					HHTipUtils.getInstance().showToast(getPageContext(),
+							R.string.choose_time_error);
+					return;
+				}
+			}
+		});
+		window.showAtLocation(getBaseBottomLayout(), Gravity.BOTTOM, 0, 0,
+				new Date());
+	}

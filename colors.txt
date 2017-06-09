@@ -1,0 +1,6 @@
+<!-- 时间 -->
+    <color name="wheel_timebtn_nor">#36B0F3</color>
+    <color name="wheel_timebtn_pre">#CCCCCC</color>
+    <color name="common_white">#FFFFFF</color>
+    <color name="item_bg">#32323232</color>
+    <!-- 时间 -->

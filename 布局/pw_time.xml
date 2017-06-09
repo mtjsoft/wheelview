@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    style="@style/hh_fi_fi"
+    android:background="@color/item_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/ll_pop"
+        style="@style/hh_wr_wr"
+        android:background="@color/common_white"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/hh_fi_wr"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/btnCancel"
+                style="@style/timepopwindow_btn"
+                android:text="@string/cancel"/>
+            <TextView
+                android:id="@+id/tv_use"
+                android:textSize="14sp"
+                android:textColor="#454545"
+                style="@style/weight_width_wr"/>
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                style="@style/timepopwindow_btn"
+                android:text="@string/sure"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#CCCCCC"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/timepicker"
+                layout="@layout/include_timepicker"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/timepicker"
+                android:layout_alignTop="@id/timepicker"
+                android:background="@drawable/bg_above_timepicker"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
